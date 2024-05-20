@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "impFont";
+    src: url("../assets/font/IMPOS10_.ttf");
+}
+
 * {
     padding:0;
     margin:0;
@@ -5,6 +10,7 @@
     list-style:none;
     border:0;
 }
+
 
 body{ 
     background-image: url("../assets/img/BG2-nocat.jpg");
@@ -70,13 +76,47 @@ body{
 
 .first-page {
     height: 90vh;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
+.fp-phrase1 {
+    padding-top: 30px;
+    font-family: 'impFont';
+    font-size: 3rem;
+    padding-left: 2rem;
+    color: #AF290D;
+    text-shadow: 0 0 3px #AF290D, 0 0 5px #FFF;
+}
+
+.fp-phrase2 {
+    text-align: center;
+    font-family: 'impFont';
+    font-size: 6rem;
+    text-wrap: nowrap;
+    padding-left: 2rem;
+    color: #AF290D;
+    text-shadow: 0 0 3px #AF290D, 0 0 5px #FFF;
+}
+
+.bg-music {
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+
+
 .last-page {
-    height: 90vh;
+    height: 100%;
+    width: 90vw;
+    display: flex;
+    align-items: end;
+    padding-bottom: 100px;
 }
 
 .mid-page {
@@ -86,10 +126,19 @@ body{
 }
 
 
-.fp-prashe1 {
-    margin-top: 90vh;
+.socials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
 }
 
+.socials img{
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    position: relative;
+}
 
 
 

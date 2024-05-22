@@ -21,7 +21,7 @@
     <video src="assets/ip-theme.mp3" autoplay="true" class="bg-music"></video>
 
     
-    <div class="ip-cat-box" data-aos="slide-down"  data-aos-duration="1500">
+    <div class="ip-cat-box" data-aos="slide-down"  data-aos-duration="1000">
         <img src="assets/img/sting.png" class="rapel">
             
         </img>
@@ -30,32 +30,105 @@
     </div>
     
     <div class="first-page">
-        <p class="fp-phrase1" data-aos="slide-right"  data-aos-duration="1500" >
-            POSSIBLE PROFITS <br>FOR
-        </p>
-        <p class="fp-phrase2"  data-aos="slide-up"  data-aos-duration="1500">
-            IMPOSSIBLE CATS
-        </p>
+        <div class="title-box">
+            <p class="ip-title" data-aos="slide-right"  data-aos-duration="1000">IMPOSSIBLE</p>
+            <p class="ip-title" data-aos="slide-right" data-aos-duration="1000"  data-aos-delay="150">CATS</p>
+        </div>
+
+        <div class="desc-box"  data-aos="slide-up"  data-aos-duration="1000">
+            <p class="desc-txt">POSSIBLE PROFITS</p>
+            <button class="button-56" role="button" onclick="movePage('mid')">SEE MORE</button>
+        </div>
+
     </div>
+    <!-- HTML !-->
 
-    <div class="mid-page">
 
-    </div>
 
-    <div class="last-page">
-        <div class="socials">
-            <a href="">
-                <img src="assets/img/icons/x.png" alt="" class="x">
-            </a>
-            <a href="">
-                <img src="assets/img/icons/pumpf.png" alt="" class="pumpf">
-            </a>
-            <a href="">
-                <img src="assets/img/icons/telegram-icon-6896828_1280.webp" alt="" class="telegram">
-            </a>
-            
+    <div class="mid-page" id="mid-page">
+        <div class="mid-top">
+            <div class="mid-top-left">
+                <div class="info-box">
+                    <p>SUPPLY</p>
+                    <p>1 billion</p>
+                </div>
+                <div class="info-box">
+                    <p>BURNT</p>
+                    <p>total</p>
+                </div>
+            </div>
+            <div class="mid-top-right">
+                <div class="info-box">
+                    <p>LIQUIDITY</p>
+                    <p>100%</p>
+                </div>
+                <div class="info-box">
+                    <p>TAX</p>
+                    <p>0/0</p>
+                </div>
+            </div>
+        </div>
+        <div class="mid-bottom">
+            <p>CA</p>
+            <div class="ca-adress">
+                <input type="text" id="ca"  value="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" disabled>
+                <button class="button-56" onclick="copyCA()">COPPY</button>
+            </div>
+            <div class="socials">
+                <a href="">
+                    <img src="assets/img/icons/x-logo.png" alt="" class="x">
+                </a>
+                <a href="">
+                    <img src="assets/img/icons/pump-logo.png" alt="" class="pumpf">
+                </a>
+                <a href="">
+                    <img src="assets/img/icons/telegram-icon.png" alt="" class="telegram">
+                </a>
+                <a href="">
+                    <img src="assets/img/icons/dex-icon.png" alt="" class="telegram">
+                </a>
+                
+            </div>
+            <button class="button-56 missions-btn" role="button" onclick="movePage('miss')">MISSIONS</button>
         </div>
     </div>
+
+    <div class="last-page" id="last-page">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item">
+                    <img src="assets/img/memes/base/central-bank.jpg">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="assets/img/memes/base/area51.jpg">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="assets/img/memes/base/trxbd.jpg">
+                </div>
+                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                <label for="carousel-2" class="carousel-control next control-1">›</label>
+                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                <label for="carousel-3" class="carousel-control next control-2">›</label>
+                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                <label for="carousel-1" class="carousel-control next control-3">›</label>
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="carousel-1" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-2" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-3" class="carousel-bullet">•</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="missions" id="miss"></div>
 
 
 

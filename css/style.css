@@ -8,11 +8,40 @@
     padding: 0;
     border-spacing: 0;
     scroll-behavior: smooth;
+
 }
 
 *, ::after, ::before{
     box-sizing: border-box;
 }
+
+/* SPOT */
+
+:root {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+  
+.mask {
+pointer-events: none;
+width: 100vw;
+height: 100vh;
+position: fixed;
+z-index: 10000;
+background-color: hsla(0,0%,0%, 0.9);
+mask: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    transparent 40px,
+    black 400px
+);
+-webkit-mask: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    transparent 40px,
+    black 400px
+);
+}
+
 
 
 /*------custom-scroll-bar - from w3schools.com------------------*/
@@ -42,9 +71,17 @@
 
 body{ 
     /* background-image: url("../assets/img/BG2-nocat.jpg"); */
-    background-color: #FBCEB1;
     width: 100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+    
+    background-size: 50px 50px;
+    background-color: #eebe9e;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    
 }
 
 
@@ -63,13 +100,15 @@ body{
     flex-direction: column;
     margin-left: 40px;
     height: 50%;
+    position: absolute;
+    width: 100vw;
 }
 
 
 .ip-title {
     padding-top: 30px;
     font-family: 'impFont';
-    font-size: 5rem;
+    font-size: 8rem;
     color: #AF290D;
     text-shadow: 0 0 3px #AF290D, 0 0 5px #FFF;
 }
@@ -79,7 +118,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    height: 50%;
+    height: 100%;
     padding-bottom: 50px;
     
 }
@@ -91,6 +130,28 @@ body{
     text-shadow: 0 0 3px #AF290D, 0 0 5px #FFF;
     text-align: center;
     margin-bottom: 50PX;
+    position: relative;
+}
+
+.see-box {
+    display: flex;
+    align-items: center;
+}
+
+.see-box i{
+    font-size: 3rem;
+    color: #AF290D;
+    text-shadow: 0 0 3px #AF290D, 0 0 5px #FFF;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.see-box :nth-child(1){
+    animation: flash .6s ease-in-out infinite;
+}
+
+.see-box :nth-child(3){
+    animation: flash-reverse .6s ease-in-out infinite;
 }
 
 .see-more {
@@ -118,6 +179,7 @@ body{
     margin-bottom: auto;
     margin-top: auto;
     z-index: 10;
+    pointer-events: none;
 }
 
 
@@ -135,6 +197,7 @@ body{
     margin-top: auto;
 
     animation: float 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .rapel {
@@ -150,6 +213,7 @@ body{
     margin-bottom: auto;
     margin-top: auto;
     animation: float 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 
@@ -194,9 +258,7 @@ body{
     gap: 100px;
 }
 
-.info-box {
-    
-}
+
 
 .info-box p{
     background-color: #000;
@@ -282,9 +344,42 @@ body{
 }
 
 .missions {
-    height: 10vh;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: end;
 }
 
+
+.miss-box{
+    display: flex;
+    font-size: 3rem;
+    color: #000;
+    text-align: center;
+    margin: 0px 10px;
+    align-items: center;
+}
+
+.miss-box i {
+    margin: 0px 20px;
+    margin-bottom: -15px;
+   
+}
+
+.miss-box i:first-of-type{
+    -webkit-animation: flash .6s ease infinite alternate;
+}
+
+.miss-box i:last-of-type{
+    -webkit-animation: flash-reverse .6s ease infinite alternate;
+}
+
+.last-button {
+    position: absolute;
+    z-index: 1000;
+}
 
 /* KEYFRAMES */
 @keyframes float {
@@ -299,6 +394,29 @@ body{
 	}
 }
 
+@keyframes flash {
+	0% {
+        text-shadow:
+                    0 5px 0 #ccc,
+                    0 2px 3px rgba(0, 0, 0, 1);  
+    }
+    100% {
+      transform:translateX(-20px);
+     
+    }
+}
+
+@keyframes flash-reverse {
+	0% {
+        text-shadow:
+                    0 5px 0 #ccc,
+                    0 2px 3px rgba(0, 0, 0, 1);  
+    }
+    100% {
+      transform:translateX(20px);
+     
+    }
+}
 
 
 
@@ -489,4 +607,76 @@ body{
     font-family: 'Open Sans', sans-serif;
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+.horizontally p{
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ margin-top: 40px;
+ line-height: 50px;
+ text-align: center;
+
+
+ /* Starting position */
+ -moz-transform:translateX(50%);
+ -webkit-transform:translateX(50%);	
+ transform:translateX(50%);
+ /* Apply animation to this element */	
+ -moz-animation: horizontally 5s linear infinite alternate;
+ -webkit-animation: horizontally 5s linear infinite alternate;
+ animation: horizontally 5s linear infinite alternate;
+}
+
+.reverse p{
+    margin-top: 50px;
+
+     /* Apply animation reverse to this element */	
+ -moz-animation: horizontally 5s linear infinite alternate-reverse;
+ -webkit-animation: horizontally 5s linear infinite alternate-reverse;
+ animation: horizontally 5s linear infinite alternate-reverse;
+
+} 
+
+
+/* Move it (define the animation) */
+@-moz-keyframes horizontally {
+ 0%   { -moz-transform: translateX(50%); }
+ 100% { -moz-transform: translateX(-50%); }
+}
+@-webkit-keyframes horizontally {
+ 0%   { -webkit-transform: translateX(50%); }
+ 100% { -webkit-transform: translateX(-50%); }
+}
+@keyframes horizontally {
+ 0%   { 
+ -moz-transform: translateX(50%); /* Browser bug fix */
+ -webkit-transform: translateX(50%); /* Browser bug fix */
+ transform: translateX(50%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-50%); /* Browser bug fix */
+ -webkit-transform: translateX(-50%); /* Browser bug fix */
+ transform: translateX(-50%); 
+ }
+}
+
+
+
+.desc-box p {
+    -webkit-animation: bounce .4s ease infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+      text-shadow:
+                  0 5px 0 #ccc,
+                  0 2px 3px rgba(0, 0, 0, 1);  
+  }
+  100% {
+    transform:translateY(-20px);
+   
+  }
 }

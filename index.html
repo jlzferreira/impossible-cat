@@ -7,37 +7,47 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 
-    <!-- AOS  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
 
 
     <title>IMPOSSIBLE CAT</title>
     
 </head>
 <body>
-    <!-- <embed src="/assets/ip-theme.mp3" loop="true" autostart="true" width="0"
-    height="0"> -->
-    <video src="assets/ip-theme.mp3" autoplay="true" class="bg-music"></video>
+    <!-- SPOT -->
+    <div class="mask"></div>
 
+
+    <div class="title-box ">
+        <div class="horizontally">
+        <p class="ip-title ">IMPOSSIBLE</p>
+        </div>
+        <div class="horizontally reverse">
+            <p class="ip-title ">CAT</p>
+        </div>
+    </div>
     
     <div class="ip-cat-box" data-aos="slide-down"  data-aos-duration="1000">
         <img src="assets/img/sting.png" class="rapel">
             
-        </img>
 
         <img src="assets/img/ip-cat.png" alt="" class="im-cat" >
-    </div>
+    </div> 
     
     <div class="first-page">
-        <div class="title-box">
-            <p class="ip-title" data-aos="slide-right"  data-aos-duration="1000">IMPOSSIBLE</p>
-            <p class="ip-title" data-aos="slide-right" data-aos-duration="1000"  data-aos-delay="150">CATS</p>
-        </div>
+        
 
-        <div class="desc-box"  data-aos="slide-up"  data-aos-duration="1000">
+        <div class="desc-box my_animation"  data-aos="slide-up"  data-aos-duration="1000">
             <p class="desc-txt">POSSIBLE PROFITS</p>
-            <button class="button-56" role="button" onclick="movePage('mid')">SEE MORE</button>
+            
+            <div class="see-box">
+                <i class="fa-solid fa-hand-point-right"></i>
+            <button class="button-56 desc-button" role="button" onclick="movePage('mid')">SEE MORE</button>
+             <i class="fa-solid fa-hand-point-left"></i>
+            </div>
         </div>
 
     </div>
@@ -89,7 +99,11 @@
                 </a>
                 
             </div>
+            <div class="miss-box">
+                <i class="fa-solid fa-hand-point-right"></i>
             <button class="button-56 missions-btn" role="button" onclick="movePage('miss')">MISSIONS</button>
+            <i class="fa-solid fa-hand-point-left"></i>
+            </div>
         </div>
     </div>
 
@@ -127,19 +141,19 @@
                 </ol>
             </div>
         </div>
+
+
+
+        <!-- NEW CAR -->
+       
     </div>
-    <div class="missions" id="miss"></div>
-
-
-
-
-
-
-
-
-    <!-- AOS INITIATE -->
-    <script>
-        AOS.init();
-      </script>
+   
+    <div class="missions last-button" id="miss">
+        <div class="miss-box">
+            <i class="fa-solid fa-hand-point-right"></i>
+        <button class="button-56 missions-btn" role="button" onclick="movePage('mid')">GO BACK</button>
+        <i class="fa-solid fa-hand-point-left"></i>
+        </div>
+    </div>
 </body>
 </html>

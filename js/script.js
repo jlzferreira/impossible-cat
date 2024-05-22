@@ -26,14 +26,14 @@ function copyCA() {
 
 
 var myListener = function () {
-    document.removeEventListener('mousemove', myListener, false);
+    document.removeEventListener('click', myListener, false);
     // do stuff
     var audio = new Audio('../assets/ip-theme.mp3');
     audio.volume = 0.3; // Reduce the Volume by Half
     audio.play();
 };
 
-document.addEventListener('mousemove', myListener, false);
+document.addEventListener('click', myListener, false);
 
 
 

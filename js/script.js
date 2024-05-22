@@ -29,7 +29,7 @@ var myListener = function () {
     document.removeEventListener('click', myListener, false);
     // do stuff
     var audio = new Audio('../assets/ip-theme.mp3');
-    audio.volume = 0.3; // Reduce the Volume by Half
+    audio.volume = 0.5; // Reduce the Volume by Half
     audio.play();
 };
 
